@@ -40,7 +40,7 @@ def hello_world():
                 #leaf_image = os.path.join(app.config['UPLOAD_FOLDER'], 'leaf_image.png')
                 foreground_image = background_removal(image_bytes=image)
                 top1_prob, disease_name, top3_disease, top3_prob = get_plant_disease(image_bytes=foreground_image)
-                return render_template('result2.html', leaf_image=data ,disease=disease_name, probability=top1_prob, top3= top3_disease, top3_prob= top3_prob)
+                return render_template('result.html', leaf_image=data ,disease=disease_name, probability=top1_prob, top3= top3_disease, top3_prob= top3_prob)
             else:
                 return render_template('wrong_image.html')
 
